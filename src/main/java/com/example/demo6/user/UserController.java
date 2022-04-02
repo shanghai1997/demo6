@@ -15,7 +15,7 @@ public class UserController {
 
     @GetMapping(value={"/user", "/api/user"})
     @ResponseBody
-    public Object addProduct() {
+    public Object show() {
         return repository.findUserByOrderByScoreDesc();
     }
 
