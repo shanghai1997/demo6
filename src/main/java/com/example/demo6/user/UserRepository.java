@@ -12,4 +12,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findUserByOrderByScoreDesc();
 
     List<User> findAllByScoreGreaterThan(Integer score);
+
+    List<User> findTop3ByOrderByScoreDesc();
 }
