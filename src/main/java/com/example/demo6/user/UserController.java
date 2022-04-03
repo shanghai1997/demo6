@@ -16,7 +16,7 @@ public class UserController {
     @GetMapping(value={"/user", "/api/user"})
     @ResponseBody
     public Object show() {
-        return repository.findUserByOrderByScoreDesc();
+        return repository.findAllByScoreGreaterThan(80);
     }
 
 }
